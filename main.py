@@ -14,6 +14,15 @@ def lines_printed_backwards(lines_list):
         line_number = lines_length - i
         print(f"{line_number} {line}")
 
+from random import choice
+
+def lines_printed_random(lines_list):
+        for line in lines_lists:
+            print(choice(lines_list))
+
+def lines_printed_custom(lines_list):   
+    lines_lenth = lin(lines_list)
+
 
 
 
