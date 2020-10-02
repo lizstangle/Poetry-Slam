@@ -1,10 +1,16 @@
+from random import choice
+#adding a library for the random funtion
+
 def get_file_lines(filename):
     infile = open(filename, "r")
     lines_list = infile.readlines()
     infile.close()
     return lines_list  
 
+line_list = get_file_lines("poem.txt")
+#line-list is the poem file and lines of the poem
 print(get_file_lines("poem.txt"))
+print(line_list)
 
 def lines_printed_backwards(lines_list):  
     lines_list.reverse()
@@ -17,47 +23,20 @@ lines_list = get_file_lines("poem.txt")
 lines_printed_backwards(lines_list)       
 
 
-# from random import choice
+def lines_printed_random(lines_list):
+    for i in range(len(lines_list)):
+        print(choice(lines_list))
 
-# def lines_printed_random(lines_list):
-#         for line in lines_lists:
-#             print(choice(lines_list))
+lines_printed_random(line_list)
+        
 
-# def lines_printed_custom(lines_list):   
-#     lines_length = lin(lines_list)
-
-
-
-
-
-# #     lines_printed_backwards(lines_list):     
-# #     lines_list.reverse()     lines_length = len(lines_list)     for i in range(lines_list):         line = lines_list[i]         line_number = lines_length - i         print(f"{line_number} {line}") 
-
-# # #     or 
-# # #     for line in infile:
-# # #         print(line)
-# # #     result = 
-
-# # # def lines_printed_backwards(lines_list):  
-# # #     print(lines_list).reverse
-
-# # # from random import choice
-# # # def lines_printed_random(lines_list):
-# # #     number_lines = len(poem)
-# # #     random.randint(0, len(locations))
+def lines_printed_custom(lines_list): 
+    for line in lines_list:    
+        words = line.split(" ")  
+        print(words[0])
 
 
-# # #     def lines_
-
-# # # def lines_printed_customer(lines_list)
-
+lines_printed_custom(line_list)
+#worked with Sawyer, Arjun & Lon
 
 
-
-# # def lines_printed_custom(lines_list):
-# #     lines_length = len(lines_list)
-
-# #     for i in range(lines_list):
-# #         if i % 4 == 0 and i % 2 ==0:
-# #             print(lines_length[i])
-    
